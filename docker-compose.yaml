@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db_user:
+    image: postgres:14.3-alpine
+    container_name: db_user
+    ports:
+      - "5432:5432"
+    env_file:
+      - user-service/.user-env
+
+  db_orders:
+    image: postgres:14.3-alpine
+    container_name: db_order
+    ports:
+      - "5433:5432"
+    env_file:
+      - order-service/.order-env
