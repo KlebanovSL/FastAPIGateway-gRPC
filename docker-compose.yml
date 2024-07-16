@@ -7,7 +7,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - user-service/.user-env
+      - user_service/.env
 
   db_order:
     image: postgres:14.3-alpine
@@ -15,4 +15,4 @@ services:
     ports:
       - "5433:5432"
     env_file:
-      - order-service/.order-env
+      - order_service/.env
