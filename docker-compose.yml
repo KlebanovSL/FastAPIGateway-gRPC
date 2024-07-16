@@ -16,3 +16,11 @@ services:
       - "5433:5432"
     env_file:
       - order_service/order.env
+
+  fastapi-gateway:
+    build:
+      context: ./fastapi_gateway
+      dockerfile: Dockerfile
+    container_name: fastapi_gateway
+    ports:
+      - "8000:8000"
